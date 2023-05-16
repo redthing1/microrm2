@@ -1,25 +1,25 @@
 name "microrm"
-targetType "library"
 description "Micro ORM for SQLite3"
 authors "Oleg Butko (deviator)"
 copyright "Copyright © 2017, Oleg Butko"
 license "MIT"
-dependency "d2sqlite3" version="~>0.19.1"
-
+dependency "d2sqlite3" version="~>1.0.0"
+targetType "library"
 configuration "all-included" {
-    subConfiguration "d2sqlite3" "all-included"
+	targetType "library"
+	subConfiguration "d2sqlite3" "all-included"
 }
-
 configuration "without-lib" {
-    subConfiguration "d2sqlite3" "without-lib"
+	targetType "library"
+	subConfiguration "d2sqlite3" "without-lib"
 }
-
 configuration "with-lib" {
-    subConfiguration "d2sqlite3" "with-lib"
+	targetType "library"
+	subConfiguration "d2sqlite3" "with-lib"
 }
-
 configuration "wintest" {
-    subConfiguration "d2sqlite3" "without-lib"
-    sourceFiles "lib/win64/sqlite3.lib" platform="windows-x86_64"
-    copyFiles "lib/win64/sqlite3.dll" platform="windows-x86_64"
+	targetType "library"
+	subConfiguration "d2sqlite3" "without-lib"
+	sourceFiles "lib/win64/sqlite3.lib" platform="windows-x86_64"
+	copyFiles "lib/win64/sqlite3.dll" platform="windows-x86_64"
 }
