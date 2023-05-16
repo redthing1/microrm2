@@ -1,6 +1,6 @@
-name "microrm"
+name "microrm2"
 description "Micro ORM for SQLite3"
-authors "Oleg Butko (deviator)"
+authors "Oleg Butko (deviator)" "redthing1"
 copyright "Copyright © 2017, Oleg Butko"
 license "MIT"
 dependency "d2sqlite3" version="~>1.0.0"
